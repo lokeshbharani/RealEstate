@@ -2,14 +2,6 @@
   width: 20rem;
 }
 
-.card:hover img{
-  transform: scale(1.1,1.1);
-  transition-duration: 250ms;
-  transition-timing-function: ease-out;
-  height: 250px;
-  opacity: 0.5;
-}
-
 .card img{
   transform: scale(1,1);
   transition-duration: 250ms;
@@ -17,16 +9,34 @@
   height: 250px;
 }
 
-.img-wrapper{
+.card-img-wrapper{
   overflow: hidden;
   position: relative;
 }
 
+.card-img-wrapper:hover img{
+  transform: scale(1.1,1.1);
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+  height: 250px;
+  opacity: 0.5;
+}
+
+.card-img-wrapper:hover .member-icons{
+  bottom: 0;
+  opacity: 1;
+}
+
 .member-icons{
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+}
+
+.animate{
+  transition: all 0.3s ease-in-out;
 }
